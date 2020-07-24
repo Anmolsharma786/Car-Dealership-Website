@@ -9,6 +9,19 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 const uri = "mongodb+srv://anmol:anmol123@cluster0.lfbto.mongodb.net/FinalAssigment?retryWrites=true&w=majority";
+//Connect to our database
+try {
+    mongoose.connect(uri, { useNewUrlParser: true });
+    var db = mongoose.connection;
+    db.on('error', function (err) {
+        console.log(err);
+    });
+    db.once('open', function (callback) {
+        console.log('Connected to MongoDB');
+    });
+} catch (err) {
+    console.log("Error : " + err);
+}
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
