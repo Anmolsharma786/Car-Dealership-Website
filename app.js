@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-
+const uri = "mongodb+srv://anmol:anmol123@cluster0.lfbto.mongodb.net/FinalAssigment?retryWrites=true&w=majority";
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
