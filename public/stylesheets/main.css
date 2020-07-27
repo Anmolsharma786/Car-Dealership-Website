@@ -1,8 +1,170 @@
+/* Name:- Anmol Sharma
+ File Description:- This is file is css file which is used in all pug files
+ Website Name:- Anmol's Portfolio
+Author name:- Anmol*/
 body {
     padding: 50px;
+    color: white;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+}
+
+.create {
+    width: auto;
+    height: auto;
+    background-image: url('../images/new-car.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.read {
+    width: auto;
+    height: auto;
+    background-image: url('../images/inventory.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.update {
+    width: auto;
+    height: auto;
+    background-image: url('../images/services.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+.delete {
+    width: auto;
+    height: auto;
+    background-image: url('../images/about.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.register {
+    color: black;
+    background-image: url('../images/register.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.login {
+    color: #c69540;
+    background-image: url('../images/log.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: #e8e8e8;
+}
+
+#Loginbtn {
+    background-color: aqua;
+    position: relative;
+}
+#rgstbtn {
+    background-color: aqua
+}
+.middle {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+div.description {
+    font-size: medium;
+}
+
+#skills-description {
+    /* specify border*/
+    border: 5px solid black;
+    text-decoration-color: brown;
+    /* apply padding*/
+    padding: 50px;
+    /*Apply margin*/
+    margin: 30px auto;
+    /* set width*/
+    width: 100%;
+    height: auto
+    /* set max width*/
+    max-width: 950px;
+}
+
+
+header {
+    background-color: #00091a;
+    height: 90px;
+    color: white;
+    position: relative;
+    font-family: 'Lobster', cursive;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+#description {
+    margin-bottom: 15px;
+}
+
+article img {
+    width: 150px;
+    height: 100px;
 }
 
 a {
     color: #00B7FF;
+}
+
+nav {
+    background-color: #e6ac00;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #20a54c;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+            color: white;
+        }
+
+
+footer {
+    background-color: #00091a;
+    height: 90px;
+    color: #e6ac00;
+    position: relative;
+    font-family: 'Lobster', cursive;
 }

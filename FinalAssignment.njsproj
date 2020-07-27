@@ -30,22 +30,57 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="public\images\about.jpg" />
+    <Content Include="public\images\car.jpg" />
+    <Content Include="public\images\index.jpg" />
+    <Content Include="public\images\inventory.jpg" />
+    <Content Include="public\images\log.jpg" />
+    <Content Include="public\images\login.jpg" />
+    <Content Include="public\images\new-car.jpg" />
+    <Content Include="public\images\register.jpg" />
+    <Content Include="public\images\services.jpg" />
+    <Content Include="public\video\cuban_car.mp4" />
+    <Content Include="public\video\ser.mp4" />
+    <Content Include="public\video\services.mp4" />
+    <Content Include="public\video\Spedometer.mp4" />
     <Content Include="routes\index.js" />
     <Content Include="routes\users.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
-    <Content Include="views\index.pug" />
-    <Content Include="views\layout.pug" />
+    <Content Include="views\delete.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\create.pug" />
     <Content Include="views\error.pug" />
+    <Content Include="views\read.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\login.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\Partials\footer.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\Partials\header.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\Register.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\update.pug">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
     <Folder Include="public\stylesheets\" />
+    <Folder Include="public\video\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
+    <Folder Include="views\Partials\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
