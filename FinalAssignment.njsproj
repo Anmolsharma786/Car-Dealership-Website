@@ -30,6 +30,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="models\CarInfo.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\user.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\images\about.jpg" />
     <Content Include="public\images\car.jpg" />
     <Content Include="public\images\index.jpg" />
@@ -37,6 +43,7 @@
     <Content Include="public\images\log.jpg" />
     <Content Include="public\images\login.jpg" />
     <Content Include="public\images\new-car.jpg" />
+    <Content Include="public\images\oldtimer.jpg" />
     <Content Include="public\images\register.jpg" />
     <Content Include="public\images\services.jpg" />
     <Content Include="public\video\cuban_car.mp4" />
@@ -73,6 +80,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="models\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />

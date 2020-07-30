@@ -8,8 +8,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var bcrypt = require('bcryptjs');
 
 const uri = "mongodb+srv://anmol:anmol123@cluster0.lfbto.mongodb.net/FinalAssigment?retryWrites=true&w=majority";
 //Connect to our database
@@ -28,7 +30,7 @@ try {
 // this is for just forth commit as per the assignment part 1 requirment
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var userModel = require('./models/user');
 var app = express();
 
 // view engine setup

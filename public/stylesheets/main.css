@@ -9,6 +9,10 @@ body {
     background-color: black;
     margin: 0;
 }
+#createform {
+    color: royalblue;
+    font: 30px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
 .create {
     width: auto;
@@ -33,7 +37,7 @@ body {
 .update {
     width: auto;
     height: auto;
-    background-image: url('../images/services.jpg');
+    background-image: url('../images/oldtimer.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -84,22 +88,6 @@ body {
 div.description {
     font-size: medium;
 }
-
-#skills-description {
-    /* specify border*/
-    border: 5px solid black;
-    text-decoration-color: brown;
-    /* apply padding*/
-    padding: 50px;
-    /*Apply margin*/
-    margin: 30px auto;
-    /* set width*/
-    width: 100%;
-    height: auto
-    /* set max width*/
-    max-width: 950px;
-}
-
 
 header {
     background-color: #00091a;
