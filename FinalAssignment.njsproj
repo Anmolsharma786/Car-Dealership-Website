@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="models\car.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="models\CarInfo.js">
       <SubType>Code</SubType>
     </Content>
@@ -46,6 +49,9 @@
     <Content Include="public\images\oldtimer.jpg" />
     <Content Include="public\images\register.jpg" />
     <Content Include="public\images\services.jpg" />
+    <Content Include="public\javascripts\delete.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\video\cuban_car.mp4" />
     <Content Include="public\video\ser.mp4" />
     <Content Include="public\video\services.mp4" />
