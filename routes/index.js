@@ -4,7 +4,6 @@ var router = express.Router();
 var passport = require('passport');
 var userModel = require('../models/user');
 var articlesModel = require('../models/CarInfo');
-var carModel = require('../models/car');
 var bcrypt = require('bcryptjs');
 var formidable = require('formidable');
 var fs = require('fs');
@@ -58,7 +57,7 @@ router.get('/Register', function (req, res) {
 router.get('/create', function (req, res) {
     res.render('create', { user: req.user });
 });
-
+/*upload the advertisment*/
 router.post('/create', function (req, res) {
     var form = new formidable.IncomingForm();
     //Specify our image file directory
@@ -69,12 +68,8 @@ router.post('/create', function (req, res) {
         files.image.name = fields.name + '.' + files.image.name.split('.')[1];
         //Create a new article using the Articles Model Schema
         const article = new articlesModel({ name: fields.name, make: fields.make, image: files.image.name, year: fields.year, price: fields.price, description: fields.description, contact: fields.contact });
-        const carArticle = new carModel({username: fields.name, image: files.image.name});
         //Insert article into DB
         article.save(function (err) {
-            console.log(err);
-        });
-        carArticle.save(function(err) {
             console.log(err);
         });
         //Upload file on our server
@@ -109,6 +104,7 @@ router.get('/read', function (req, res) {
         res.render('login', { title: 'Login' });
     }
 });
+/*updating the ad*/
 router.get('/update/:id', function (req, res) {
     articlesModel.findById(req.params.id, function (err, foundArticle) {
         if (err) console.log(err);
@@ -128,8 +124,8 @@ router.post('/update', function (req, res) {
 router.post('/delete/:id', function (req, res) {
     //Find and delete article
     articlesModel.findByIdAndDelete(req.params.id, function (err, model) {
-        //res.send({ "success": "Article Successfully Deleted!" })
-        res.redirect('/read');
+        res.send({ "success": "Article Successfully Deleted!" })
+        /*res.redirect('/read');*/
     });
 });
 /*Logout*/
