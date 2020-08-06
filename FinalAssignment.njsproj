@@ -69,9 +69,6 @@
     <Content Include="views\login.pug">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="views\Partials\footer.pug">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="views\Partials\header.pug">
       <SubType>Code</SubType>
     </Content>
