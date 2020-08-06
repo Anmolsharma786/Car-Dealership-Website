@@ -78,6 +78,9 @@
     <Content Include="views\Register.pug">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\search.pug">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\update.pug">
       <SubType>Code</SubType>
     </Content>

@@ -124,6 +124,7 @@ router.post('/update', function (req, res) {
 router.post('/delete/:id', function (req, res) {
     //Find and delete article
     articlesModel.findByIdAndDelete(req.params.id, function (err, model) {
+        
         res.send({ "success": "Article Successfully Deleted!" })
         /*res.redirect('/read');*/
     });
@@ -135,4 +136,20 @@ router.get('/logout', function (req, res) {
     });
 });
 
+/*Get for search page*/
+router.get('/search', function (req, res) {
+    res.render('search', { user: req.user });
+});
+
+/*post for search*/
+router.post('/search', function (req, res) {
+    var form = new formidable.IncomingForm();
+    var name = req.body.search;
+    articlesModel.find({ make: name }, function (err, foundArticles) {
+        console.log(err);
+        console.log(foundArticles);
+        //Pass found articles from server to pug file
+        res.render('search', { articles: foundArticles, user: req.user });
+    });
+});
 module.exports = router;
