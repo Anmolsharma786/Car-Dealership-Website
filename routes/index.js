@@ -84,10 +84,9 @@ router.post('/create', function (req, res) {
     form.on('end', function (err, fields, files) {
         console.log('File successfuly uploaded');
         //res.end('File successfuly uploaded');
+        res.redirect('/read');
     });
-
-
-    res.redirect('/read');
+ 
 });
 /* GET read page. */
 router.get('/read', function (req, res) {
