@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk", crossorigin="anonymous")
+    nav
+        if (!user)
+            ul
+                li
+                    a(href="/login") Login
+                li
+                    a(href="/register") Register
+                li
+                    a(href="/read") Inventory
+        else
+            ul
+                li
+                    a(href="/read") Inventory
+                li
+                    a(href="/create") Upload Ad
+                li
+                    a(href='/search') Search
+                li
+                    a(href='/logout') Logout
+    block content

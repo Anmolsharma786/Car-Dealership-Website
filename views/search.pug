@@ -1,0 +1,18 @@
+extends Partials\header
+
+block content
+  body(class= 'search')
+    h1 Search
+        form(method='POST' action='/search')
+            fieldset                
+                input(type='text' name='search')
+
+        if (articles && articles.length)
+            section
+                each article in articles
+                    div(class= "product")
+                        img(src='/images/'+article.image)
+                        br
+                        h1= "$"+article.price
+                        p= "owner's Contact Number is: "+article.contact
+                        p= "Car's Description: "+article.description

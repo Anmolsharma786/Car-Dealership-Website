@@ -1,0 +1,36 @@
+extends Partials\header
+
+block content
+  body(class= "create")
+    h1= title
+    p Welcome to #{title}
+    form(method= 'POST' enctype= 'multipart/form-data' action= '/create' id= "createform")
+        fieldset
+            label(for= 'name') Car Name:
+            br
+            input(name= 'name' type= 'text')
+        fieldset
+            label(for= 'make') Car Make:
+            br
+            input(name= 'make' type= 'text')
+        fieldset
+            label(for= 'image') Car Image:  
+            br
+            input(type= 'file' name= 'image')
+        fieldset
+            label(for= 'year') Model:  
+            br
+            input(name= 'year' type= 'date')
+        fieldset
+            label(for= 'price') Price($):  
+            br
+            input(name= 'price' type= 'text')
+        fieldset
+            label(for= 'description') Description:  
+            br
+            input(name= 'description' type= 'text')
+        fieldset
+            label(for= 'contact') Contact:  
+            br
+            input(name= 'contact' type= 'text')
+        input(type= 'submit' value= 'Submit')

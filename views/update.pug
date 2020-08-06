@@ -1,0 +1,35 @@
+extends Partials\header
+
+block content
+  body(class= "update")
+    form(method= 'POST' action= '/update' id= "createform")
+        fieldset
+            label(for= 'name') Car Name:
+            br
+            input(name= 'name' type= 'text' value= article.name)
+        fieldset
+            label(for= 'make') Car Make:
+            br
+            input(name= 'make' type= 'text' value= article.make)
+        fieldset
+            label(for= 'image') Car Image:  
+            br
+            input(type= 'file' name= 'image')
+        fieldset
+            label(for= 'year') Model:  
+            br
+            input(name= 'year' type= 'date' value= article.year)
+        fieldset
+            label(for= 'price') Price($):  
+            br
+            input(name= 'price' type= 'text' value= article.price)
+        fieldset
+            label(for= 'description') Description:  
+            br
+            input(name= 'description' type= 'text' value= article.description)
+        fieldset
+            label(for= 'contact') Contact:  
+            br
+            input(name= 'contact' type= 'text' value= article.contact)
+        input(type='hidden' name='id' value=article.id)
+        button(type= 'submit' value= 'Submit') Update
